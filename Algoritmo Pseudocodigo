@@ -1,0 +1,32 @@
+Algoritmo UPCBANK
+	Definir TN Como Real
+	Definir TS Como Real
+	Definir TE Como Real
+	Escribir 'Ingrese el dia de la operacion'
+	Leer diaOperacion
+	Escribir 'Ingrese el valor Futuro'
+	Leer vfuturo
+	Escribir 'Ingrese el valor Presente'
+	Leer vpresente
+	Escribir 'Ingrese la proporcion de tiempo expresada en años '
+	Leer Tiempo
+	Escribir 'Ingrese el numero de periodos de capitalizacion que hay en el tiempo que esta expresada la tasa'
+	Leer m
+	Escribir 'Ingrese el numero de periodos de capitalizacion que hay en el tiempo de inversion'
+	Leer n
+	Escribir 'Seleccione la tasa de interes(Efectiva=E, Nominal=O, Simple= S)'
+	Leer T
+	Segun T  Hacer
+		'E':
+			TE <-((vfuturo/vpresente)-1)/100
+		'O':
+			TN <- (m*((vfuturo/vpresente)^(1/n))-1)
+		'S':
+			TS <- ((vfuturo/vpresente)-1)/Tiempo
+	FinSegun
+	Escribir '--------------------------------------------'
+	Escribir '------- Resultados de la Operacion ---------'
+	Escribir 'Tasa Nominal ',TN,'%'
+	Escribir 'Tasa Efectiva ',TE,'%'
+	Escribir 'Tasa Simple ',TS,'%'
+FinAlgoritmo
